@@ -1,0 +1,206 @@
+/* --- CSS VARIABLES FOR THEMING --- */
+:root {
+    --bg-paper: #f4f4f0;
+    --text-main: #111111;
+    --accent: #000000;
+    --pixel-shadow: 4px 4px 0px var(--accent);
+    --border-main: 2px solid var(--accent);
+    --sidebar-bg: #e5e5df;
+}
+
+body.dark-mode {
+    --bg-paper: #121212;
+    --text-main: #e0e0e0;
+    --accent: #4af626; /* Terminal green accent */
+    --pixel-shadow: 4px 4px 0px var(--accent);
+    --border-main: 2px solid var(--accent);
+    --sidebar-bg: #0a0a0a;
+}
+
+/* --- BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    background-color: var(--bg-paper);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    border-right: var(--border-main);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatar-pixel {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: var(--bg-paper);
+    border: var(--border-main);
+    box-shadow: var(--pixel-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background: var(--accent);
+    color: var(--bg-paper);
+}
+
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- UI ELEMENTS (PIXEL BOXES) --- */
+.pixel-box {
+    background: var(--bg-paper);
+    border: var(--border-main);
+    box-shadow: var(--pixel-shadow);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pixel-btn {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background: var(--bg-paper);
+    color: var(--text-main);
+    border: var(--border-main);
+    box-shadow: 2px 2px 0px var(--accent);
+    cursor: pointer;
+}
+
+.pixel-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px var(--accent);
+}
+
+.secret-btn {
+    opacity: 0.3;
+}
+.secret-btn:hover {
+    opacity: 1;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid var(--text-main);
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+/* --- MAIN CONTENT --- */
+.content {
+    flex-grow: 1;
+    padding: 3rem;
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: var(--border-main);
+    padding-bottom: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.page-section {
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+}
+
+/* --- WYSIWYG EDITOR --- */
+.toolbar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.toolbar button {
+    font-family: inherit;
+    font-size: 1.2rem;
+    background: none;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+.toolbar button:hover {
+    background: var(--accent);
+    color: var(--bg-paper);
+}
+
+#rich-text-editor {
+    min-height: 200px;
+    outline: none;
+    padding: 10px;
+}
+
+#rich-text-editor img {
+    max-width: 100%;
+    border: var(--border-main);
+    margin: 10px 0;
+}
+
+.publish-btn {
+    margin-top: 1rem;
+    width: 100%;
+}

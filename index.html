@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naufal Lofty | Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar-pixel">NL</div>
+                <h1>Naufal Lofty</h1>
+                <p>Engineer</p>
+            </div>
+            <nav class="nav-menu">
+                <button onclick="showSection('home')" class="nav-btn active" id="btn-home">/home</button>
+                <button onclick="showSection('projects')" class="nav-btn" id="btn-projects">/projects</button>
+                <button onclick="showSection('blog')" class="nav-btn" id="btn-blog">/blog</button>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="Naufal_Lofty_Resume.pdf" download class="pixel-btn" style="text-decoration: none; text-align: center; display: block; margin-bottom: 10px;">
+                    [⬇] Download Resume
+                </a>
+                <button id="theme-toggle" class="pixel-btn">Dark Mode [OFF]</button>
+                <button id="admin-toggle" class="pixel-btn secret-btn">Admin Login</button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section id="home" class="page-section active">
+                <h2>> whoami</h2>
+                
+                <div class="pixel-box text-block">
+                    <h3>Naufal Lofty | System Optimizer & Cloud Architect</h3>
+                    <br>
+                    <p>Welcome to my digital workspace. I am an AWS Certified Cloud Practitioner with a foundation in Mechatronics Engineering. I specialize in bridging the gap between physical manufacturing reliability and scalable cloud infrastructure.</p>
+                    <br>
+                    <p>Currently, I operate in high-compliance production environments, writing scripts to eliminate operational bottlenecks with 100% accuracy. Outside of my day job, I architect cloud-native solutions, focusing on containerization, CI/CD, and system observability.</p>
+                </div>
+
+                <h2>> system_specs --current</h2>
+                <div class="grid">
+                    <div class="pixel-box card">
+                        <h3>Cloud & Infrastructure</h3>
+                        <br>
+                        <p>> AWS (EC2, S3, IAM, VPC)<br>> Docker & Kubernetes<br>> Nginx Web Servers</p>
+                    </div>
+                    <div class="pixel-box card">
+                        <h3>Automation & Observability</h3>
+                        <br>
+                        <p>> Linux (Ubuntu/CentOS)<br>> Python & Bash Scripting<br>> Prometheus & Grafana</p>
+                    </div>
+                    <div class="pixel-box card">
+                        <h3>Automation & Mechatronics</h3>
+                        <br>
+                        <p>> PLC Programming (Siemens/Mitsubishi/Keyence)<br>> 3D Printing (Bambulab P1S/X1E/X1C & Ender 3)<br>> IoT Device Integration</p>
+                    </div>
+                    <div class="pixel-box card">
+                        <h3>Hardware & Hobbies</h3>
+                        <br>
+                        <p>> Bambu Lab P1S<br>> PC Building<br>> Local Cafe Enthusiast</p>
+                    </div>
+                </div>
+
+                <h2>> cat offline_mode.txt</h2>
+                <div class="pixel-box text-block" style="border-style: dashed;">
+                    <p>System downtime is important. When I am not configuring VPCs or analyzing server logs, I am usually hunting down the best local cafes around Shah Alam, optimizing hardware prints on my Bambu Lab P1S, or planning my next custom PC build.</p>
+                    <br>
+                    <p>Sometimes I watch One Piece 👒🍖🏴‍☠️, and play cosy games like Dave The Diver 🤿</p>
+                </div>
+            </section>
+            <section id="projects" class="page-section">
+                <h2>> ls ./projects</h2>
+                
+                <div class="grid">
+                    <div class="pixel-box card">
+                        <h3>📁 devops-portfolio</h3>
+                        <br>
+                        <p>A comprehensive cloud engineering portfolio built with Python. Showcases Infrastructure as Code principles, cloud-native deployments, and serverless architecture.</p>
+                        <br>
+                        <span class="tag">Python</span> <span class="tag">AWS</span>
+                        <br><br>
+                        <a href="https://github.com/nuafal/devops-portfolio.git" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block;">[View Source]</a>
+                    </div>
+                    <div class="pixel-box card">
+                        <h3>📁 uptime-monitor-automation</h3>
+                        <br>
+                        <p>An automated JavaScript monitoring solution designed to track system availability, execute health checks, and ensure zero downtime for critical web services.</p>
+                        <br>
+                        <span class="tag">JavaScript</span> <span class="tag">Observability</span>
+                        <br><br>
+                        <a href="https://github.com/nuafal/uptime-monitor-automation.git" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block;">[View Source]</a>
+                    </div>
+                    <div class="pixel-box card">
+                        <h3>📁 musafir-app</h3>
+                        <br>
+                        <p>A responsive, location-aware web application. Built with secure coding practices, utilizing environment variable injection to protect external API credentials.</p>
+                        <br>
+                        <span class="tag">HTML/CSS</span> <span class="tag">JavaScript</span>
+                        <br><br>
+                        <a href="https://github.com/nuafal/musafir-app.git" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block;">[View Source]</a>
+                        <a href="https://musafir-app-sepia.vercel.app/" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; margin-left: 10px;">[Run Demo]</a>
+                    </div>
+                    <div class="pixel-box card">
+                        <h3>📁 gitar</h3>
+                        <p>This project is a command-line tool that mimics some of the core functionalities of Git, such as initializing a repository, adding files to a staging area, and committing them.</p>
+                        <br>
+                        <span class="tag">JavaScript</span> <span class="tag">CLI</span>
+                        <br><br>
+                        <a href="https://github.com/nuafal/gitar" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block;">[View Source]</a>
+                    </div>
+                </div>
+            </section>
+            <section id="blog" class="page-section">
+                <h2>> Log Entries</h2>
+                <div class="pixel-box text-block" id="public-blog-feed">
+                    <p><em>No entries yet. System waiting for input...</em></p>
+                </div>
+            </section>
+
+            <section id="admin-editor" class="page-section secret-section">
+                <h2>> System Override: Edit Mode</h2>
+                <div class="pixel-box editor-container">
+                    <div class="toolbar">
+                        <button onclick="formatDoc('bold')" title="Bold"><b>B</b></button>
+                        <button onclick="formatDoc('italic')" title="Italic"><i>I</i></button>
+                        <button onclick="formatDoc('underline')" title="Underline"><u>U</u></button>
+                        <button onclick="addLink()" title="Add Link">Link</button>
+                        <button onclick="addImage()" title="Insert Image">📷 Image</button>
+                    </div>
+                    <div id="rich-text-editor" contenteditable="true" placeholder="Start typing your entry here..."></div>
+                    <button class="pixel-btn publish-btn" onclick="publishPost()">Publish to Log</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
